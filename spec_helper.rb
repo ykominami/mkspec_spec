@@ -5,7 +5,7 @@ require 'bundler/setup'
 require 'mkspec'
 
 
-$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift File.expand_path('../../lib', __dir__)
 
 if RUBY_VERSION < '1.9.3'
   ::Dir.glob(::File.expand_path('support/**/*.rb', __dir__)).each do |f|
