@@ -35,7 +35,7 @@ module Mkspec
       o.test_1 = "test_1"
       o.test_2 = "test_2"
       o.format_fname = "format.txt"
-      o.number_of_testgroup = 60
+      o.number_of_testgroup = 59
       o.number_of_testscript = 19
       o.number_of_testgroup_of_first_testscript = 3
       o.tgroup_0_name = "mruby-MrubyBridge"
@@ -48,11 +48,11 @@ module Mkspec
     end
 
     def _config
-      @o._config = Mkspec::Config.new(@o.spec_dir, @o._output_dir, nil, nil).setup
+      @o._config = Mkspec::Config.new(@o.spec_dir, @o.data_top_dir, @o._output_dir, nil, nil).setup
     end
 
     def config_0
-      @o.config_0 = Mkspec::Config.new(@o.spec_dir, @o.output_dir, nil, nil).setup
+      @o.config_0 = Mkspec::Config.new(@o.spec_dir, @o.data_top_dir, @o.output_dir, nil, nil).setup
     end
 
     def make_script_name(name)
@@ -100,11 +100,11 @@ module Mkspec
     end
 
     def create_instance_of_config
-      Config.new(@o.spec_dir, @o.output_dir, nil, nil).setup
+      Config.new(@o.spec_dir, @o.data_top_dir, @o.output_dir, nil, nil).setup
     end
 
     def _create_instance_of_config
-      Mkspec::Config.new(@o.spec_dir, @o._output_dir, nil, nil).setup
+      Mkspec::Config.new(@o.spec_dir, @o.data_top_dir, @o._output_dir, nil, nil).setup
     end
 
     def create_instance_of_root
